@@ -1,0 +1,136 @@
+ 
+body {background:#F7F7F7;
+text-align:center;}
+
+#formid input[type=text],select, textarea  { width: 90%;}
+
+#formid input[type=checkbox] {
+display: inline-block;
+width: 15px;
+height: 15px;
+padding-left:-100px;
+background-position: 0 0;
+background-repeat: no-repeat;
+cursor: pointer;
+font-weight:bold;
+}
+
+label{
+font-weight:bold;
+color:#787878;
+}
+
+.divPrin {
+/*	border:1px solid black;*/
+	margin:auto 0;
+	padding-top:50px;
+
+} 
+
+.titulo{
+background:#efefef;
+border-top:1px solid #cccccc;
+border-right:1px solid #cccccc;
+border-left:1px solid #cccccc;
+padding-top:20px;
+padding-bottom:20px;
+border-radius:5px 5px 0px 0px;
+width:380px;
+font-weight:bold;
+color:#565656;
+}
+
+.divFormat {
+	padding-top:20px;
+	border:1px solid #cccccc;
+	width:380px;
+	background:#ffffff;
+
+} 
+#etiqueta{
+	font-size:15px;
+	font-weight:bold;
+}
+#divCheckB{
+padding-left:20px
+}
+
+
+/************Estilo input file agregar img****************/
+.divInpFile {
+  position: relative;
+  overflow: hidden;
+  left:-130px
+  }
+.divInpFile input[type="file"] {
+  /** Posicionamos de forma absoluta **/
+  position: absolute;
+  top:0;
+  right: 0;
+  margin: 0;
+  /** Cambiamos los bordes **/
+  border: solid ;
+  border-width: 0 0 0px 0px;
+  /** Lo hacemos transparente **/
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.spanInpFile{
+  /*cursor: pointer;*/
+  width:120px;
+  height:40px;
+ display:inline-block;
+}
+/*************************************g****************/
+
+/****************************************/
+/*****************************************/
+
+/* A partir de aquí, vista móvil */
+ 
+ @media only screen and (max-width: 480px) {
+	.titulo{
+		background:#efefef;
+		border-top:1px solid #cccccc;
+		border-right:1px solid #cccccc;
+		border-left:1px solid #cccccc;
+		padding-top:20px;
+		padding-bottom:20px;
+		border-radius:5px 5px 0px 0px;
+		width:100%;
+		font-weight:bold;
+	}
+
+	.divFormat {
+		padding-top:20px;
+		border:1px solid #cccccc;
+		width:100%;
+		background:#ffffff;
+
+	} 
+	#etiqueta{
+		font-size:15px;
+		font-weight:bold;
+	}	
+
+	
+ }
+ @media only screen and (max-width: 640px) {
+ 	/*******************/
+	
+  
+ 
+ }
+@media only screen and (max-width: 768px) {
+ 
+	body {
+		
+	}
+
+ 
+
+}
+@media only screen and (max-width: 968px) {
+	
+}
+

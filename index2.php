@@ -23,15 +23,25 @@ include 'configfb.php';
 ?>
 <!DOCTYPE html>
 	<head>
-	<title>PF Movil </title>
-	<meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-	<link href="css/style.css" rel="stylesheet">
 	<script src="js/jquery-1.8.2.min.js"></script>
-	<script src="js/examinar.js"></script>
 	</head>	
-<body>
+	<script>
+	function empezar(a){
+	
+	pic = $('#pic').val();
+
+	$('#pathpic').val(pic);
+	}
+	</script>
+	<body onload='empezar();'>
+	
+	
+	
 <?php
+
+
 //if(isset($_REQUEST["msj"])){
+
 
 		if(isset($_REQUEST["msj"]) AND isset($_REQUEST["tweet"]) AND $_REQUEST['tweet']==true){
 		
@@ -52,7 +62,7 @@ include 'configfb.php';
 			);
 			$result = $connection->post('statuses/update', $parameters);
 			//echo "Enviando a Twitter: ".$_REQUEST["msj"]."<br/>".$result;
-				
+							
 		}
 
 		
@@ -130,30 +140,15 @@ include 'configfb.php';
 //}
 ?>
 
-				<div class='divPrin' align='center'>
-					<div class='titulo'>Facebook-Twitter</div>
-						<div id='divFormat'  class='divFormat' style=''>	
-							<form action=''  method='post' id='formid'  enctype="multipart/form-data">
-									<label id='etiqueta'>Mensaje:</label><br>
-									<textarea id='msj' name='msj' rows="5"></textarea><br/>	<br/>
-								
-											<div class="divInpFile">
-												<span class="spanInpFile" style="background:url(galeria.jpg);background-size: 100px 40px;background-repeat:no-repeat;"></span>
-												<input type="file" id="file-input" class="file-input" name="pic"  onchange="doIt()" accept="image/jpeg"/>
-											</div>
-											<center><canvas id="foto" class="canvasFoto" style='display:none' ></canvas></center>
-									<!-- input type='file' class="file" name='pic' id='pic' onchange='empezar(this.value);' value='' accept="image/jpeg" --><br/><br/>
-									<input type='hidden' name='pathpic' id='pathpic'><br/>
-									<div id='divCheckB' align=left>
-										<input type='checkbox' name='tweet' id='tweet'/><label for="tweet">Twitter</label><br/>
-										<input type='checkbox' name='fb'    id='fb'/><label for="fb">Facebook</label><br/>
-									</div><br/><br/>
-									<button type='submit'>Enviar</button>
-							</form>
-						</div>
-					
-					
-				</div>
+					<form action=''  method='post'  enctype="multipart/form-data">
+							<label>Mensaje:</label><br>
+							<textarea id='msj' name='msj'></textarea><br/>	
+							<input type='file' name='pic' id='pic' onchange='empezar(this.value);' value='' accept="image/jpeg" ><br/>
+							<input type='hidden' name='pathpic' id='pathpic'><br/>
+							<input type='checkbox' name='tweet'/>Twitter<br/>
+							<input type='checkbox' name='fb' id='fb'/>Facebook<br/>
+							<button type='submit'>Enviar</button>
+					</form>
 
 
     </body>
