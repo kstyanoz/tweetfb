@@ -35,8 +35,8 @@ include 'configfb.php';
 
 		if(isset($_REQUEST["msj"]) AND isset($_REQUEST["tweet"]) AND $_REQUEST['tweet']==true){
 		
-			$consumerKey    = 'DWUXSI1l4posXOBkTJXTeC8Vt';
-			$consumerSecret = 'I5TLlFeKTOqBrEoy9xvNu60IoIq7OdwITowuUc5RD7gSYn7soM';
+			$consumerKey    = 'uzfFO6Rb3rEIsZqiPGddEQtGu';
+			$consumerSecret = 'liGm87lUgsKyK87TezyGPbUUXHbkCxok6DZPaFL12x4NrpSGg2';
 			$access_token     = '778752343-wP6EirICwRZiv755s2schp2b5WN4KEEmWTfja69w';
 			$access_token_secret    = 'gNeGXCIpSQMn8CjGi3TffSvDC3B4saarCbDxmkvEvE7rP';
 			# API OAuth
@@ -148,7 +148,7 @@ include 'configfb.php';
 										<input type='checkbox' name='tweet' id='tweet'/><label for="tweet">Twitter</label><br/>
 										<input type='checkbox' name='fb'    id='fb'/><label for="fb">Facebook</label><br/>
 									</div><br/><br/>
-									<button type='submit'>Enviar</button>
+									<button type='submit'>Enviar</button><br/>
 							</form>
 						</div>
 					
