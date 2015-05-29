@@ -148,7 +148,7 @@ include 'configfb.php';
 										<input type='checkbox' name='tweet' id='tweet'/><label for="tweet">Twitter</label><br/>
 										<input type='checkbox' name='fb'    id='fb'/><label for="fb">Facebook</label><br/>
 									</div><br/><br/>
-									<button type='submit'>Enviar</button>
+									<button type='submit'>Enviar</button><br/>
 							</form>
 						</div>
 					
